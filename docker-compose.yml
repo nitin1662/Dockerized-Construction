@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5000"
+    container_name: backend_container
+    
+
+  frontend:
+    build: ./frontend/roomzy_frontend
+    ports:
+      - "3000:80"
+    container_name: frontend_container

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TestContext } from "../context/test";
+import { TestContext } from "../context/Test";
 import { AuthContext } from "../context/AuthContext";
 
 export default function Navbar() {

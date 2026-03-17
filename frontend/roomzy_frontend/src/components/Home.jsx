@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
 import { useContext } from "react";
-import { TestContext } from "../context/test";
+import { TestContext } from "../context/Test";
 import WhyRoomzy from "./WhyRoomzy";
 import RoommatesCard from "./RoommatesCard";
 import { useState, useEffect } from "react";
@@ -13,7 +13,7 @@ let Home = () => {
   useEffect(() => {
     const fetchRoommates = async () => {
       try {
-        const res = await fetch("http://localhost:8000/api/roommates"); // your backend URL
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/roommates`); // your backend URL
         const data = await res.json();
         setRoommates(data);
       } catch (err) {

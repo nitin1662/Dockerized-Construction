@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext.jsx";
-import { TestContext } from "../context/test.jsx";
+import { TestContext } from "../context/Test.jsx";
 
 export default function AuthPage() {
   const { setTab } = useContext(TestContext);
@@ -36,8 +36,8 @@ export default function AuthPage() {
     }
 
     const url = isLogin
-      ? "http://localhost:8000/api/roommates/login"
-      : "http://localhost:8000/api/roommates/register";
+      ? `${import.meta.env.VITE_API_URL}/api/roommates/login`
+      : `${import.meta.env.VITE_API_URL}/api/roommates/register`;
 
     const payload = { ...formData };
 

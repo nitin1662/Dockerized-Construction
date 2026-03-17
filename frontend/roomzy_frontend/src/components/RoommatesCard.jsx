@@ -4,7 +4,8 @@ import { AuthContext } from "../context/AuthContext";
 
 export default function RoommatesCard({ roommates }) {
   const { user } = useContext(AuthContext);
- 
+  const [activeUserId, setActiveUserId] = useState(null);
+  const [message, setMessage] = useState("");
   // Remove logged-in user from list
   const filteredRoommates = roommates.filter(
     (r) => r.email !== user?.email

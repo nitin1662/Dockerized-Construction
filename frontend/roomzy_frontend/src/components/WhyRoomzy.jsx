@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TestContext } from "../context/test";
+import { TestContext } from "../context/Test";
 
 export default function WhyRoomzy() {
   let { setTab } = useContext(TestContext);

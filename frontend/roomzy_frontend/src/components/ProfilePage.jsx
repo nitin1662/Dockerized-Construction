@@ -13,7 +13,7 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8000/api/roommates/profile/${user.email}`
+          `${import.meta.env.VITE_API_URL}/api/roommates/profile/${user.email}`
         );
         const data = await res.json();
         setProfile(data);
